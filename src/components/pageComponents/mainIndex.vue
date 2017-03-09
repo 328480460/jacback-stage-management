@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="mianIndex">
        <div class="name"> {{subPage_1}}</div>
   </div>
 </template>
@@ -20,8 +20,7 @@ export default {
 <style lang='less' scoped>
 
 *{padding: 0;margin: 0;}
-.section {position: absolute;left: 200px;top: 100px;right:0;bottom: 0;}
-.section {
+.mianIndex {
 	.name {
 		color: blue;
 	} 
