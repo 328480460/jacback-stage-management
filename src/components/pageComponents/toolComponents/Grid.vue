@@ -1,6 +1,16 @@
 <template>
   <div class="grid">
       <table border="0">
+        <tr>
+          <td>id</td>
+          <td>操作人</td>
+          <td>文件</td>
+          <td>模块</td>
+          <td>控制器</td>
+          <td>方法</td>
+          <td>详细参数</td>
+          <td>操作方法</td>
+        </tr>
         <tr v-for='(i,key,value) in tabledata'>
           <td  @click='say'> {{i.id}}</td>
           <td  @click='say'> {{i.name}}</td>

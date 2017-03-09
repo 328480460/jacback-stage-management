@@ -2,7 +2,7 @@
   <div class="search-box">
        <div class="search-input-box"> 
 			<label>搜索条件</label>
-			<input type="text" name="search" v-model="limit">
+			<input type="text" name="search" v-model='keyword' @input='change'>
        </div>
 
   </div>
@@ -11,11 +11,17 @@
 <script>
 export default {
   name: 'search-box',
-  data () {
+  data() {
     return {
-    	limit:''
+      keyword:''
     }
   },
+  methods:{
+    change() {
+      this.$emit('searchLimit',this.keyword);
+    }
+  }
+
 }
 </script>
 
