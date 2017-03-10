@@ -55,7 +55,7 @@ export var falseGridData = [{
 }, {
     id: '6',
     name: 'zhang',
-    file: 'vue',
+    file: 'wang',
     module: 'vuex',
     control: 'ctrl',
     fn: 'dosomething',
@@ -67,7 +67,7 @@ export var falseGridData = [{
     file: 'vue',
     module: 'vuex',
     control: 'ctrl',
-    fn: 'dosomething',
+    fn: 'wang',
     detailArg: '12.12.2',
     operation: 'just do it'
 }, {
@@ -84,7 +84,7 @@ export var falseGridData = [{
     name: 'zhang',
     file: 'vue',
     module: 'vuex',
-    control: 'ctrl',
+    control: 'wang',
     fn: 'dosomething',
     detailArg: '12.12.2',
     operation: 'just do it'
@@ -120,13 +120,13 @@ export var falseGridData = [{
     name: 'zhang',
     file: 'vue',
     module: 'vuex',
-    control: 'ctrl',
+    control: 'wang',
     fn: 'dosomething',
     detailArg: '12.12.2',
     operation: 'just do it'
 },{
     id: '14',
-    name: 'zhang',
+    name: 'wang',
     file: 'vue',
     module: 'vuex',
     control: 'ctrl',
@@ -150,7 +150,7 @@ export var falseGridData = [{
     control: 'ctrl',
     fn: 'dosomething',
     detailArg: '12.12.2',
-    operation: 'just do it'
+    operation: 'wang'
 },{
     id: '17',
     name: 'zhang',

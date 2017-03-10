@@ -1,8 +1,8 @@
 <template>
   <div class="mianIndex">
        <search-box @searchLimit ='search'></search-box>
-       <grid :tabledata ='gridData' v-on:child-say='showParentName'></grid>
-       <page-limit :pagesList = 'pagesList' v-on:getPageData ="getPageData"></page-limit>
+       <grid :tabledata ='firstPageData' v-on:child-say='showParentName'></grid>
+       <page-limit :pagesList = 'pagesList' :index = 'currenIndex' v-on:getPageData ="getPageData"></page-limit>
   </div>
 </template>
 
@@ -19,28 +19,29 @@ Vue.use(VueResource)
 export default {
   name: 'section',
   mounted: function(){
-    this.gridData = this.falseGridData.slice(this.currenIndex-1,this.showListCount)
+    this.firstPageData = this.filterData.slice(this.currenIndex-1,this.showListCount)
   },
   data () {
     return {
     	url:'htttp://www.baidu.com',
-      falseGridData:falseGridData,
-      gridData:'',
-      showListCount: 5,
-      currenIndex :1,
-      searchLimit:'',
-      keyword:''
+      falseGridData:falseGridData,  //全部数据
+      firstPageData:'',             //首页
+      showListCount: 5,             //每页显示条数
+      currenIndex :1,               //当前页
+      keyword:''                    //查询关键字
     }
   },
   computed: {
     pagesList() {
-      return Math.ceil(this.falseGridData.length/this.showListCount)
+      return Math.ceil(this.filterData.length/this.showListCount)
     },
     filterData(){
+      if(!this.keyword) {
+        return this.falseGridData;
+      }
       var vm = this;
-      return vm.falseGridData.filter((item)=>{
-
-          return item.name == vm.keyword;
+      return this.falseGridData.filter((item)=>{
+          return item.id == vm.keyword || item.name == vm.keyword || item.file ==vm.keyword || item.module ==vm.keyword || item.control ==vm.keyword || item.fn ==vm.keyword || item.detailArg ==vm.keyword || item.operation ==vm.keyword;
       });
     }
 
@@ -53,7 +54,10 @@ export default {
     },*/
     search(keyword) {
       this.keyword = keyword;
-      this.gridData = this.filterData;
+      //重新加载首页
+      this.firstPageData = this.filterData.slice(this.currenIndex-1,this.showListCount);
+      this.currenIndex = 1;
+
     },
     showParentName(childsay) {
       console.log('parents' + childsay );
@@ -63,7 +67,7 @@ export default {
       this.currenIndex = index;
       var start = (this.currenIndex-1)*this.showListCount;
       var end = (this.currenIndex)*this.showListCount;
-      this.gridData = this.falseGridData.slice(start, end);
+      this.firstPageData = this.filterData.slice(start, end);
     }
   },
   components: {

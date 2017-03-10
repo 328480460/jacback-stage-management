@@ -9,7 +9,7 @@
 <script>
 export default {
   name: 'pagelimit',
-  props:['pagesList'],
+  props:['pagesList','index'],
   methods:{
     turn(curr) {
       this.index = curr;
@@ -17,11 +17,11 @@ export default {
       this.$emit('getPageData',curr);
     }
   },
-  data(){
+  /*data(){
     return {
       index:1
     }
-  }
+  }*/
 
 }
 </script>
