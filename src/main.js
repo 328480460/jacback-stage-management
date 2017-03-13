@@ -6,8 +6,6 @@ import router from './router'
 import Vuex from 'vuex'
 import store from './vuex/mian.vuex.js'
 
-console.log(store);
- 
 /* eslint-disable no-new */
 
 var vm = new Vue({
