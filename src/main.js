@@ -11,7 +11,7 @@ console.log(store);
 /* eslint-disable no-new */
 
 var vm = new Vue({
-  el: '#pp',
+  el: '#app',
   router,
   store,
   template: '<App/>',

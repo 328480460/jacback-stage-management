@@ -43,7 +43,6 @@ export default {
         this.$store.commit('addTab',ele);
         return
       }
-
       // this.$store.commit('addTab',ele);
     }
   },
