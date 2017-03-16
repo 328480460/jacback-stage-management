@@ -16,7 +16,7 @@
 window.onload=function(){
   var windowH = window.innerHeight;
   var left_list = document.querySelector('.left-list');
-  left_list.style.height = windowH-50 +'px';
+  left_list.style.height = windowH- 50 +'px';
 }
 import {mapMutations} from 'vuex'
 export default {
@@ -33,7 +33,7 @@ export default {
   },
   methods:{
     showCList(ele){
-      ele.isOpen = !ele.isOpen;
+      ele.isOpen = !ele.isOpen; 
     },
     addTab(ele) {
       if(ele.id == 0) {
@@ -43,7 +43,6 @@ export default {
         this.$store.commit('addTab',ele);
         return
       }
-      // this.$store.commit('addTab',ele);
     }
   },
  /* methods: {

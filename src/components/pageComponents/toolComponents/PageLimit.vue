@@ -12,17 +12,10 @@ export default {
   props:['pagesList','index'],
   methods:{
     turn(curr) {
-      this.index = curr;
       /*去请求页面数据*/
       this.$emit('getPageData',curr);
     }
-  },
-  /*data(){
-    return {
-      index:1
-    }
-  }*/
-
+  }
 }
 </script>
 
