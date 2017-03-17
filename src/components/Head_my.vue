@@ -4,10 +4,9 @@
     <div class="list ">
       <ul>
           <li v-for='i in list'>{{i}}</li>
-
       </ul>
     </div>
-    </h1>
+    </h1>q
   </div>
 </template>
 
@@ -17,7 +16,7 @@ export default {
   data () {
     return {
       msg: '个人中心',
-      list:["账号详情","账号管理","退出登录"],
+      list:["账号详情","账号管理","退出登录"]
     }
   },
   methods: {
