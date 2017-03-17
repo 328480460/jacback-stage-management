@@ -62,7 +62,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang='less' scoped>
 *{padding: 0;margin:0;}
 ul li {list-style: none}
 .left-list{;height: 800px;background-color: #333;width: 200px;color: #ffffff;text-align: left;text-indent: 30px}
