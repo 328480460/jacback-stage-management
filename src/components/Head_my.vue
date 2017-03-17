@@ -1,12 +1,12 @@
 <template>
   <div class="header">
     <h1 @mouseenter="openList" @mouseleave='hideList'>{{ msg }}
-    <div class="list ">
+    <div class="list">
       <ul>
           <li v-for='i in list'>{{i}}</li>
       </ul>
     </div>
-    </h1>q
+    </h1>
   </div>
 </template>
 
