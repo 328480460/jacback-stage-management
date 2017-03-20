@@ -19,16 +19,13 @@ window.onload=function(){
   left_list.style.height = windowH- 50 +'px';
 }
 import {mapMutations} from 'vuex'
+import {controlList} from '../falsedata/falsedata.js'
+
 export default {
   name: 'left',
   data () {
     return {
-      controlList:[
-        {id:0,name:'后台首页','isOpen':false,'isClick':true},
-        {id:2,name:'我的面板','isOpen':false,'isClick':false,children:[{id:21,name:'个人信息','isOpen':false,'isClick':false},{id:22,name:'修改密码','isOpen':false,'isClick':false},{id:23,name:'日志信息','isOpen':false,'isClick':false}]},
-        {id:3,name:'用户管理','isOpen':false,'isClick':false,children:[{id:31,name:'用户列表','isOpen':false,'isClick':false},{id:32,name:'角色列表','isOpen':false,'isClick':false},{id:33,name:'菜单管理','isOpen':false,'isClick':false}]},
-        {id:4,name:'内容管理','isOpen':false,'isClick':false,children:[{id:41,name:'网站栏目管理','isopen':false,'isClick':false},{id:42,name:'所有档案列表','isOpen':false,'isClick':false},{id:43,name:'待审核档案','isOpen':false,'isClick':true},{id:44,name:'我发布的档案','isOpen':false,'isClick':false},{id:45,name:'我发布的文档','isOpen':false,'isClick':false}]}
-      ]
+      controlList:controlList
     }
   },
   methods:{
